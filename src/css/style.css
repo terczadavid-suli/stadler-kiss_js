@@ -29,3 +29,13 @@ select:hover {
     background-color: #6c757d;
     
 }
+
+@media screen and (max-width: 991px) {
+    img {
+        margin: 1rem;
+    }
+
+}
+/* img {
+        margin: 3rem;
+    } */
