@@ -8,10 +8,22 @@ async function txtBeolvasas(fajl, elem) {
 
 fejvalaszt.addEventListener("change", function() {
     const fejezet = this.value;
-    if (fejezet == "alaphelyzet") {
+    if (fejezet === "alaphelyzet_v") {
         szovegtartalom.textContent = "Kérem válasszon a fenti menüből!!!";
     }
-    else if (fejezet == "section1") {
+    else if (fejezet === "section1_v") {
         txtBeolvasas("./src/contents/bev.txt", szovegtartalom)
+    }
+    else if (fejezet === "section2_v") {
+        txtBeolvasas("./src/contents/neve.txt", szovegtartalom)
+    }
+    else if (fejezet === "section3_v") {
+        txtBeolvasas("./src/contents/tortenete.txt", szovegtartalom)
+    }
+    else if (fejezet === "section4_v") {
+        txtBeolvasas("./src/contents/bev.txt", szovegtartalom)
+    }
+    else if (fejezet === "section5_v") {
+        
     }
 });
