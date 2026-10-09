@@ -6,6 +6,36 @@ async function txtBeolvasas(fajl, elem) {
     elem.style.whitespace = "pre-line";
 };
 
+function show_image(src, width, height, alt) {
+    const img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+    document.body.appendChild(img);
+}
+
+img_select.addEventListener("change", function() {
+        const img = this.value;
+        if (img = "img1") {
+            show_image("./src/imgs/kiss_obb-cityjet.png", 500, 300, "KISS");
+        }
+        else if (img = "img2") {
+            show_image("./src/imgs/kiss_obb-cityjet.png", 500, 300, "KISS");
+        }
+        else if (img = "img3") {
+            show_image("./src/imgs/kiss_obb-cityjet.png", 500, 300, "KISS");
+        }
+        else if (img = "img4") {
+            show_image("./src/imgs/kiss_obb-cityjet.png", 500, 300, "KISS");
+        }
+        else if (img = "img5") {
+            show_image("./src/imgs/kiss_obb-cityjet.png", 500, 300, "KISS");
+        }
+        });     
+
 fejvalaszt.addEventListener("change", function() {
     const fejezet = this.value;
     if (fejezet === "alaphelyzet_v") {
@@ -24,6 +54,6 @@ fejvalaszt.addEventListener("change", function() {
         txtBeolvasas("./src/contents/bev.txt", szovegtartalom)
     }
     else if (fejezet === "section5_v") {
-        
+        document.body.appendChild(img_select);
     }
 });

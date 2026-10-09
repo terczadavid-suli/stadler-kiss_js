@@ -1,6 +1,6 @@
 // HEADER
 const cimcontainer = document.createElement("div");
-cimcontainer.className = "container-fluid text-center p-5";
+cimcontainer.className = "container-fluid bg-primary  text-center p-5";
 cimcontainer.id = "cimcontainer";
 
 const cimsor = document.createElement("div");
@@ -20,7 +20,7 @@ main_container.className = "container p-2";
 const main_row = document.createElement("div");
 main_row.className = "row";
 const main_col = document.createElement("div");
-main_col.className = "col-sm-12";
+main_col.className = "col-sm-12 col-md-6";
 
 const section1 = document.createElement("option");
 section1.id = "section1";
@@ -56,12 +56,38 @@ alaphelyzet.textContent = "Válasszon...";
 const fejvalaszt = document.createElement("select");
 fejvalaszt.id = "fejvalaszt";
 
+//kép
+const img_select = document.createElement("select");
+img_select.id = "img_select";
+
+const img1 = document.createElement("option");
+img1.value = "img1";
+img1.textContent = "Image1";
+
+const img2 = document.createElement("option");
+img2.value = "img2";
+img2.textContent = "Image2";
+
+const img3 = document.createElement("option");
+img3.value = "img3";
+img3.textContent = "Image3";
+
+const img4 = document.createElement("option");
+img4.value = "img4";
+img4.textContent = "Image4";
+
+const img5 = document.createElement("option");
+img5.value = "img5";
+img5.textContent = "Image5";
+
 // end
+img_select.append(img1, img2, img3, img4, img5);
+// section5.append(img_select);
 const szovegtartalom = document.createElement("p");
 szovegtartalom.id = "szovegtartalom";
 szovegtartalom.textContent = "Kérem válasszon a fenti menüből!!!"
 
-cimcontainer.append(cimsor, cimoszlopok, focim);
+cimcontainer.append(cimsor, cimoszlopok, focim, fejvalaszt);
 fejvalaszt.append(alaphelyzet, section1, section2, section3, section4, section5)
-main_container.append(main_row, main_col, fejvalaszt, szovegtartalom)
+main_container.append(main_row, main_col, szovegtartalom)
 document.body.append(cimcontainer, main_container)
